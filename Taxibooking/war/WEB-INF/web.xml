@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+	<!-- taxibooking -->
+	
+	<servlet>
+		<servlet-name>Requests</servlet-name>
+		<servlet-class>com.adaptavant.taxi.RegisterServlet</servlet-class>
+	</servlet>
+    <servlet-mapping>
+		<servlet-name>Requests</servlet-name>
+		<url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+	
+	<!-- login -->
+
+		<servlet>
+		<servlet-name>CheckRegistered</servlet-name>
+		<servlet-class>com.adaptavant.taxi.CheckRegistered</servlet-class>
+	    </servlet>
+	    <servlet-mapping>
+		<servlet-name>CheckRegistered</servlet-name>
+		<url-pattern>/CheckRegistered </url-pattern>
+	    </servlet-mapping>
+	    
+		<!-- log Out -->
+		<servlet>
+		 <servlet-name>Logout</servlet-name>
+		 <servlet-class>com.adaptavant.taxi.Logout</servlet-class>
+		 </servlet>
+          <servlet-mapping>
+          <servlet-name>Logout</servlet-name>    
+          <url-pattern>/logout</url-pattern>
+          </servlet-mapping>
+          	       
+		
+	<!-- update -->
+
+		 <servlet>
+		 <servlet-name>Update</servlet-name>
+		 <servlet-class>com.adaptavant.taxi.Update</servlet-class>
+	     </servlet>
+	<servlet-mapping>
+		<servlet-name>Update</servlet-name>
+		<url-pattern>/Update </url-pattern>
+	</servlet-mapping>
+	<!-- serv ajax -->
+
+		 <servlet>
+		 <servlet-name>Serve</servlet-name>
+		 <servlet-class>com.adaptavant.taxi.Serve</servlet-class>
+	     </servlet>
+	<servlet-mapping>
+		<servlet-name>Serve</servlet-name>
+		<url-pattern>/serve </url-pattern>
+	</servlet-mapping>
+	<!-- upload ajax -->
+
+		 <servlet>
+		 <servlet-name>Getimg</servlet-name>
+		 <servlet-class>com.adaptavant.taxi.Getimg</servlet-class>
+	     </servlet>
+	<servlet-mapping>
+		<servlet-name>Getimg</servlet-name>
+		<url-pattern>/up </url-pattern>
+	</servlet-mapping>
+	
+	 
+	<welcome-file-list>
+		<welcome-file>jsp/Login.jsp</welcome-file>
+	</welcome-file-list>
+	
+</web-app>
